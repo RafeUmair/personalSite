@@ -7,6 +7,17 @@ export const GalaxyBackground = () => {
     useEffect(() => {
         generateStars();
         generateComets();
+
+        const handleResize = () => {
+            generateStars();
+            generateComets();
+        }
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        }
+
     }, []);
 
     const generateStars = () => {
