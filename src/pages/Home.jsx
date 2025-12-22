@@ -1,4 +1,5 @@
 import { DarkModeToggle } from "../components/DarkModeToggle";
+import { GalaxyBackground } from "../components/GalaxyBackground";
 
 export const Home = () => {
   return( 
@@ -7,6 +8,7 @@ export const Home = () => {
       <DarkModeToggle />
 
       {/* Background Animation */}
+      <GalaxyBackground />
 
       {/* Menu Bar */}
 
