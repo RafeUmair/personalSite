@@ -1,5 +1,6 @@
 import { DarkModeToggle } from "../components/DarkModeToggle";
 import { GalaxyBackground } from "../components/GalaxyBackground";
+import { NavBar } from "../components/NavBar";
 
 export const Home = () => {
   return( 
@@ -11,9 +12,9 @@ export const Home = () => {
       <GalaxyBackground />
 
       {/* Menu Bar */}
+      <NavBar />
 
       {/* Main Content */}
-      <h1 className="text-4xl font-bold">Home Page</h1>
 
       {/* Footer */}
     </div>
