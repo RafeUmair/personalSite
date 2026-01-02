@@ -11,10 +11,8 @@ export const HomeSection = () => {
                     <span className="text-primary opacity-0 animate-fade-in-delay-1">Rafe Umair</span>
                 </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed opacity-0 max-auto animate-fade-in-delay-4">
-                " Welcome to my personal website! I'm a graduate software engineer who is passionate 
-                about building reliable, well designed software solutions and continuously improving 
-                my skills while learning new technologies. This website highlights my journey, the 
-                projects I've built, and the skills I'm continuing to develop as I move forward in my career."
+                Welcome to my personal website! I'm a <strong>Graduate Software Engineer</strong> and here you will find some of my personal projects, skills,
+                and experience as I continue to grow and build reliable, well designed software solutions.
               </p>
 
               <div className=" pt-4 opacity-0 animate-fade-in-delay-4">
@@ -26,7 +24,7 @@ export const HomeSection = () => {
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center opacity-70 animate-bounce">
-      <span className="text-small text-muted foreground mb-3"> Scroll </span>
+      <span className="text-small text-muted-foreground mb-3"> Scroll </span>
       <ArrowDown className="w-6 h-6 mt-2 text-primary" />
       </div>
     </section>

@@ -2,6 +2,7 @@ import { DarkModeToggle } from "../components/DarkModeToggle";
 import { GalaxyBackground } from "../components/GalaxyBackground";
 import { NavBar } from "../components/NavBar";
 import { HomeSection } from "../components/HomeSection";
+import { AboutMeSection } from "../components/AboutMeSection";
 
 export const Home = () => {
   return( 
@@ -18,10 +19,11 @@ export const Home = () => {
       {/* Main Content */}
       <main>
         <HomeSection />
-
+        <AboutMeSection />
+        
       </main>
 
-
+    
       {/* Footer */}
     </div>
   );
