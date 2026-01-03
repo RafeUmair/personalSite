@@ -3,6 +3,7 @@ import { GalaxyBackground } from "../components/GalaxyBackground";
 import { NavBar } from "../components/NavBar";
 import { HomeSection } from "../components/HomeSection";
 import { AboutMeSection } from "../components/AboutMeSection";
+import { SkillSection } from "../components/SkillSection";
 
 export const Home = () => {
   return( 
@@ -20,6 +21,7 @@ export const Home = () => {
       <main>
         <HomeSection />
         <AboutMeSection />
+        <SkillSection />
         
       </main>
 
