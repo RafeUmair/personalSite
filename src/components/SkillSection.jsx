@@ -23,6 +23,7 @@ const skills = [
     { name: "Django", level: 65, category: "Backend" },
     { name: "MongoDB", level: 75, category: "Backend" },
     { name: "GraphQL", level: 50, category: "Backend" },
+    { name:"Mobile Application Development", level: 90, category: "Backend"},
 
     //Soft skills
     { name: "Customer Service", level: 95, category: "Soft Skills" },
@@ -31,6 +32,15 @@ const skills = [
     { name: "Teamwork", level: 90, category: "Soft Skills" },
     { name: "Adaptability", level: 85, category: "Soft Skills" },
     { name: "Time Management", level: 90, category: "Soft Skills" },
+
+    //Computer Science Fundamentals
+    { name: "Data Structures & Algorithms", level: 75, category: "Computer Science Fundamentals" },
+    { name: "Database Systems", level: 75, category: "Computer Science Fundamentals" },
+    { name: "Operating Systems", level: 70, category: "Computer Science Fundamentals" },
+    { name: "Distributed Systems", level: 85, category: "Computer Science Fundamentals" },
+    { name: "Networking", level: 85, category: "Computer Science Fundamentals" },
+    { name: "Software Engineering Testing", level: 80, category: "Computer Science Fundamentals" },
+
 ];
 
 const skillsByCategory = {
@@ -38,6 +48,7 @@ const skillsByCategory = {
   "Backend": skills.filter(skill => skill.category === "Backend"),
   "Tools & Platforms": skills.filter(skill => skill.category === "Tools & Platforms"),
   "Soft Skills": skills.filter(skill => skill.category === "Soft Skills"),
+  "Computer Science Fundamentals": skills.filter(skill => skill.category === "Computer Science Fundamentals"),
 };
 
 export const SkillSection = () => {
@@ -51,7 +62,7 @@ export const SkillSection = () => {
         </h2>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {["All", "Frontend", "Backend", "Tools & Platforms", "Soft Skills"].map(
+          {["All", "Frontend", "Backend", "Tools & Platforms", "Soft Skills", "Computer Science Fundamentals"].map(
             (category) => (
               <button
                 key={category}
