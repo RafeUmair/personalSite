@@ -35,7 +35,7 @@ export const NavBar = () => {
                     </span>
                 </a>
                 
-                <div className ="hidden md:flex space-x-8">
+                <div className ="hidden md:flex space-x-8 mr-32">
                     {navTitles.map((title, key) => (
                         <a key={key} href={title.href} className="text-foreground hover:text-primary transition-colors duration-200">
                             {title.name}
