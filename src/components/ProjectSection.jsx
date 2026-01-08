@@ -18,7 +18,20 @@ const projects = [
     repoLink:
       "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
   },
+  {
+    id: 2,
+    title: "Personal Portfolio Website",
+    description:" A personal portfolio website that showcases a bit about me, my skills, my projects, and my experience as a developer. ",
+    images: [
+      { src: "/projects/PortfolioHomePage.png", caption: "Home Page" },
+      { src: "/projects/PortfolioAboutMe.png", caption: "About Me " },
+    ],
+    tags: ["React", "Tailwind CSS", "JavaScript"],
+    demoLink: "",
+    repoLink: "https://github.com/RafeUmair/personalSite"
+  }
 ];
+
 
 const ImageCarousel = ({ images }) => {
   const [index, setIndex] = useState(0);
@@ -37,14 +50,12 @@ const ImageCarousel = ({ images }) => {
         loading="lazy"
       />
 
-      {/* Caption */}
       {images[index].caption && (
         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-1 rounded-md text-sm">
           {images[index].caption}
         </div>
       )}
 
-      {/* Navigation Buttons */}
       {images.length > 1 && (
         <>
           <button
@@ -78,7 +89,8 @@ export const ProjectSection = () => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="bg-card rounded-lg overflow-hidden card-hover flex flex-col md:flex-row"
+              className="bg-card rounded-xl overflow-hidden flex flex-col md:flex-row border border-border 
+                        hover:border-primary/60 transition-colors"
             >
 
               <div className="md:w-2/3 w-full h-80 md:h-auto bg-black/5">
@@ -94,7 +106,7 @@ export const ProjectSection = () => {
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-secondary/40 text-secondary-foreground rounded-full text-sm font-medium text-center"
+                      className="px-4 py-2 bg-secondary/40 text-secondary-foreground rounded-full text-sm font-medium text-center border border-border"
                     >
                       {tag}
                     </span>
