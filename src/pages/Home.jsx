@@ -24,8 +24,8 @@ export const Home = () => {
       <main>
         <HomeSection />
         <AboutMeSection />
-        <SkillSection />
         <ProjectSection />
+        <SkillSection />
         <ContactSection />
         
       </main>

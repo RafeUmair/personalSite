@@ -4,8 +4,8 @@ import { cn } from "@/lib/utils";
 const navTitles = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about-me" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" }
 ];
 

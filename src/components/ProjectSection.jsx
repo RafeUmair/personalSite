@@ -4,9 +4,24 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
+    title: "Houser",
+    description:
+    "A Melbourne property price predictor powered by machine learning. Uses a Random Forest model trained on real housing data to estimate prices based on features such as suburb, land size and number of bedrooms.",
+    images: [
+      { src: "/projects/HousePriceHome.png", caption: "Houser Home Page" },
+      { src: "/projects/HousePriceValuation.png", caption: "House Valuation Results" },
+      { src: "/projects/HousePriceMap.png", caption: "Price map visualization" },
+    ],
+    tags: ["React", "FastAPI", "Python", "scikit-learn", "Tailwind CSS", "Leaflet"],
+    demoLink: "https://house-market-predictor.vercel.app/",
+    repoLink: "https://github.com/RafeUmair/houseMarketPredictor",
+    apiLink: "https://housemarketpredictor.onrender.com"
+  },
+  {
+    id: 2,
     title: "EduResource",
     description:
-  "A full stack project featuring two web apps; one for administrators and one for students. Plus a mobile Ipad app for student access on tablets. Students can loan educational resources, while administrators can manage resources, users and loans across the system.",
+      "A full stack project featuring two web apps; one for administrators and one for students. Plus a mobile Ipad app for student access on tablets. Students can loan educational resources, while administrators can manage resources, users and loans across the system.",
     images: [
       { src: "/projects/EduResourceAdminHome.png", caption: "Admin-Web app (Home Page)" },
       { src: "/projects/EduResourceLoginPage.png", caption: "Student-Web app (Login Page)" },
@@ -19,7 +34,7 @@ const projects = [
       "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Personal Portfolio Website",
     description:" A personal portfolio website that showcases a bit about me, my skills, my projects, and my experience as a developer. ",
     images: [
@@ -32,12 +47,10 @@ const projects = [
   }
 ];
 
-
 const ImageCarousel = ({ images }) => {
   const [index, setIndex] = useState(0);
 
-  const prev = () =>
-    setIndex((prev) => (prev - 1 + images.length) % images.length);
+  const prev = () => setIndex((prev) => (prev - 1 + images.length) % images.length);
   const next = () => setIndex((prev) => (prev + 1) % images.length);
 
   return (
@@ -102,11 +115,11 @@ export const ProjectSection = () => {
 
                 <p className="text-muted-foreground mb-6">{project.description}</p>
 
-                <div className="flex justify-center gap-3 mb-6">
+                <div className="flex flex-wrap justify-center gap-2 mb-6">
                   {project.tags.map((tag, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-secondary/40 text-secondary-foreground rounded-full text-sm font-medium text-center border border-border"
+                      className="px-3 py-1 bg-secondary/40 text-secondary-foreground rounded-full text-xs font-medium text-center border border-border whitespace-nowrap"
                     >
                       {tag}
                     </span>
@@ -123,6 +136,18 @@ export const ProjectSection = () => {
                     >
                       <ExternalLink size={16} />
                       View Live Site
+                    </a>
+                  )}
+
+                  {project.apiLink && (
+                    <a
+                      href={project.apiLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="themed-button flex items-center gap-2"
+                    >
+                      <ExternalLink size={16} />
+                      API (Backend)
                     </a>
                   )}
 
