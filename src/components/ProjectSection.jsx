@@ -35,15 +35,17 @@ const projects = [
   },
   {
     id: 3,
-    title: "Personal Portfolio Website",
-    description:" A personal portfolio website that showcases a bit about me, my skills, my projects, and my experience as a developer. ",
+    title: "NextRead",
+    description:
+      "A full stack book discovery and recommendation platform. Built with a Spring Boot REST API and React frontend, featuring AI powered recommendations via Groq (LLaMA 3.1) and Firebase authentication.",
     images: [
-      { src: "/projects/PortfolioHomePage.png", caption: "Home Page" },
-      { src: "/projects/PortfolioAboutMe.png", caption: "About Me " },
+      { src: "/projects/NextReadsHomePage.png", caption: "NextRead Home Page" },
+      { src: "/projects/NextReadsDiscovery.png", caption: "Book Discovery" },
+      { src: "/projects/NextReadsMyBooks.png", caption: "My Books" },
     ],
-    tags: ["React", "Tailwind CSS", "JavaScript"],
-    demoLink: "",
-    repoLink: "https://github.com/RafeUmair/personalSite"
+    tags: ["Spring Boot", "React", "Tailwind CSS", "Firebase Auth", "Docker", "Groq (LLaMA 3.1)"],
+    repoLink: "https://github.com/RafeUmair/nextRead",
+    inDevelopment: true,
   }
 ];
 
@@ -107,11 +109,22 @@ export const ProjectSection = () => {
             >
 
               <div className="md:w-2/3 w-full h-80 md:h-auto bg-black/5">
-                <ImageCarousel images={project.images} />
+                {project.images.length > 0 ? (
+                  <ImageCarousel images={project.images} />
+                ) : (
+                  <div className="w-full h-full" />
+                )}
               </div>
 
               <div className="md:w-1/3 w-full p-8 flex flex-col justify-center">
-                <h3 className="text-3xl font-semibold mb-6">{project.title}</h3>
+                <div className="flex items-center gap-3 mb-6">
+                  <h3 className="text-3xl font-semibold">{project.title}</h3>
+                  {project.inDevelopment && (
+                    <span className="px-2 py-0.5 bg-yellow-500/20 text-yellow-500 border border-yellow-500/40 rounded-full text-xs font-medium whitespace-nowrap">
+                      In Development
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-muted-foreground mb-6">{project.description}</p>
 
