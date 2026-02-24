@@ -19,23 +19,7 @@ const projects = [
   },
   {
     id: 2,
-    title: "EduResource",
-    description:
-      "A full stack project featuring two web apps; one for administrators and one for students. Plus a mobile Ipad app for student access on tablets. Students can loan educational resources, while administrators can manage resources, users and loans across the system.",
-    images: [
-      { src: "/projects/EduResourceAdminHome.png", caption: "Admin-Web app (Home Page)" },
-      { src: "/projects/EduResourceLoginPage.png", caption: "Student-Web app (Login Page)" },
-      { src: "/projects/EduResourceMobileApp.png", caption: "Mobile-Ipad app (Home Page)" },
-    ],
-    tags: ["React", "Node.js", "Express", "Flutter"],
-    demoLink:
-      "https://lending-library-admin-web-fe-capdk.ondigitalocean.app/",
-    repoLink:
-      "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
-  },
-  {
-    id: 3,
-    title: "NextRead",
+    title: "NextReads",
     description:
       "A full stack book discovery and recommendation platform. Built with a Spring Boot REST API and React frontend, featuring AI powered recommendations via Groq (LLaMA 3.1) and Firebase authentication.",
     images: [
@@ -46,6 +30,22 @@ const projects = [
     tags: ["Spring Boot", "React", "Tailwind CSS", "Firebase Auth", "Docker", "Groq (LLaMA 3.1)"],
     repoLink: "https://github.com/RafeUmair/nextRead",
     inDevelopment: true,
+  },
+  {
+    id: 3,
+    title: "EduResource",
+    description:
+     "A full stack educational resource lending system developed for Curtin University's School of Education. The platform includes separate web applications for administrators and students, as well as a dedicated iPad app for tablet based student access. Students can browse, reserve, and loan educational resources, while administrators can manage inventory, users, and loans across the system.",
+    images: [
+      { src: "/projects/EduResourceAdminHome.png", caption: "Admin-Web app (Home Page | React)" },
+      { src: "/projects/EduResourceLoginPage.png", caption: "Student-Web app (Login Page | React)" },
+      { src: "/projects/EduResourceMobileApp.png", caption: "Mobile-Ipad app (Home Page | Flutter)" },
+    ],
+    tags: ["React", "Node.js", "Express", "Flutter"],
+    demoLink:
+      "https://lending-library-admin-web-fe-capdk.ondigitalocean.app/",
+    repoLink:
+      "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
   }
 ];
 
