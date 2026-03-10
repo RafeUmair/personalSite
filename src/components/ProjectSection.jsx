@@ -28,7 +28,9 @@ const projects = [
       { src: "/projects/NextReadsMyBooks.png", caption: "My Books" },
     ],
     tags: ["Spring Boot", "React", "Tailwind CSS", "Firebase Auth", "Docker", "Groq (LLaMA 3.1)"],
+    demoLink: "https://next-read-phi.vercel.app/",
     repoLink: "https://github.com/RafeUmair/nextRead",
+    apiLink: "https://nextread-6l8e.onrender.com/",
     inDevelopment: true,
   },
   {
