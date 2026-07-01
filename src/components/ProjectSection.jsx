@@ -19,31 +19,35 @@ const projects = [
   },
   {
     id: 2,
+    title: "NextReads",
+    description:
+      "A full stack book discovery and recommendation platform. Built with a Spring Boot REST API and React frontend, featuring AI powered recommendations via Groq (LLaMA 3.1) and Firebase authentication.",
+    images: [
+      { src: "/projects/NextReadsHomePage.png", caption: "NextRead Home Page" },
+      { src: "/projects/NextReadsDiscovery.png", caption: "Book Discovery" },
+      { src: "/projects/NextReadsMyBooks.png", caption: "My Books" },
+    ],
+    tags: ["Spring Boot", "React", "Tailwind CSS", "Firebase Auth", "Docker", "Groq (LLaMA 3.1)"],
+    demoLink: "https://next-read-phi.vercel.app/",
+    repoLink: "https://github.com/RafeUmair/nextRead",
+    apiLink: "https://nextread-6l8e.onrender.com/",
+    inDevelopment: true,
+  },
+  {
+    id: 3,
     title: "EduResource",
     description:
-      "A full stack project featuring two web apps; one for administrators and one for students. Plus a mobile Ipad app for student access on tablets. Students can loan educational resources, while administrators can manage resources, users and loans across the system.",
+     "A full stack educational resource lending system developed for Curtin University's School of Education. The platform includes separate web applications for administrators and students, as well as a dedicated iPad app for tablet based student access. Students can browse, reserve, and loan educational resources, while administrators can manage inventory, users, and loans across the system.",
     images: [
-      { src: "/projects/EduResourceAdminHome.png", caption: "Admin-Web app (Home Page)" },
-      { src: "/projects/EduResourceLoginPage.png", caption: "Student-Web app (Login Page)" },
-      { src: "/projects/EduResourceMobileApp.png", caption: "Mobile-Ipad app (Home Page)" },
+      { src: "/projects/EduResourceAdminHome.png", caption: "Admin-Web app (Home Page | React)" },
+      { src: "/projects/EduResourceLoginPage.png", caption: "Student-Web app (Login Page | React)" },
+      { src: "/projects/EduResourceMobileApp.png", caption: "Mobile-Ipad app (Home Page | Flutter)" },
     ],
     tags: ["React", "Node.js", "Express", "Flutter"],
     demoLink:
       "https://lending-library-admin-web-fe-capdk.ondigitalocean.app/",
     repoLink:
       "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
-  },
-  {
-    id: 3,
-    title: "Personal Portfolio Website",
-    description:" A personal portfolio website that showcases a bit about me, my skills, my projects, and my experience as a developer. ",
-    images: [
-      { src: "/projects/PortfolioHomePage.png", caption: "Home Page" },
-      { src: "/projects/PortfolioAboutMe.png", caption: "About Me " },
-    ],
-    tags: ["React", "Tailwind CSS", "JavaScript"],
-    demoLink: "",
-    repoLink: "https://github.com/RafeUmair/personalSite"
   }
 ];
 
@@ -107,11 +111,22 @@ export const ProjectSection = () => {
             >
 
               <div className="md:w-2/3 w-full h-80 md:h-auto bg-black/5">
-                <ImageCarousel images={project.images} />
+                {project.images.length > 0 ? (
+                  <ImageCarousel images={project.images} />
+                ) : (
+                  <div className="w-full h-full" />
+                )}
               </div>
 
               <div className="md:w-1/3 w-full p-8 flex flex-col justify-center">
-                <h3 className="text-3xl font-semibold mb-6">{project.title}</h3>
+                <div className="flex items-center gap-3 mb-6">
+                  <h3 className="text-3xl font-semibold">{project.title}</h3>
+                  {project.inDevelopment && (
+                    <span className="px-2 py-0.5 bg-yellow-500/20 text-yellow-500 border border-yellow-500/40 rounded-full text-xs font-medium whitespace-nowrap">
+                      In Development
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-muted-foreground mb-6">{project.description}</p>
 

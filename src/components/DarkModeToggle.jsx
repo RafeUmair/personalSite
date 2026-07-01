@@ -3,11 +3,14 @@ import { Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export const DarkModeToggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    if (savedTheme === "light") {
+      document.documentElement.classList.remove("dark");
+      setIsDarkMode(false);
+    } else {
       document.documentElement.classList.add("dark");
       setIsDarkMode(true);
     }
