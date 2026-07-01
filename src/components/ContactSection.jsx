@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Youtube, Github } from "lucide-react";
 
 export const ContactSection = () => {
   return (
@@ -63,6 +63,16 @@ export const ContactSection = () => {
           <p className="text-sm text-muted-foreground">Connect with me</p>
 
           <div className="flex justify-center gap-6">
+            <a
+              href="https://github.com/RafeUmair"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+
             <a
               href="https://www.linkedin.com/in/rafe-umair-92a651245/"
               target="_blank"

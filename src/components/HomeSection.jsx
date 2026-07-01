@@ -15,9 +15,17 @@ export const HomeSection = () => {
                 and experience as I continue to grow and build reliable, well designed software solutions.
               </p>
 
-              <div className=" pt-4 opacity-0 animate-fade-in-delay-4">
+              <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex items-center justify-center gap-4">
                 <a href="#projects" className="themed-button">
                   View My Work
+                </a>
+                <a
+                  href="https://github.com/RafeUmair"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="themed-button"
+                >
+                  View My GitHub
                 </a>
               </div>
             </div>
