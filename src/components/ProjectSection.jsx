@@ -4,37 +4,23 @@ import { ChevronLeft, ChevronRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Houser",
-    description:
-    "A Melbourne property price predictor powered by machine learning. Uses a Random Forest model trained on real housing data to estimate prices based on features such as suburb, land size and number of bedrooms.",
-    images: [
-      { src: "/projects/HousePriceHome.png", caption: "Houser Home Page" },
-      { src: "/projects/HousePriceValuation.png", caption: "House Valuation Results" },
-      { src: "/projects/HousePriceMap.png", caption: "Price map visualization" },
-    ],
-    tags: ["React", "FastAPI", "Python", "scikit-learn", "Tailwind CSS", "Leaflet"],
-    demoLink: "https://house-market-predictor.vercel.app/",
-    repoLink: "https://github.com/RafeUmair/houseMarketPredictor",
-    apiLink: "https://housemarketpredictor.onrender.com"
-  },
-  {
-    id: 2,
     title: "NextReads",
     description:
-      "A full stack book discovery and recommendation platform. Built with a Spring Boot REST API and React frontend, featuring AI powered recommendations via Groq (LLaMA 3.1) and Firebase authentication.",
+    "A full stack book discovery platform. Built with a Spring Boot REST API and a React frontend, it aggregates book data from the OpenLibrary API, curates a live literary news feed from multiple RSS sources, and delivers AI powered recommendations via Groq (LLaMA 3.1). This is backed by Firebase Auth and Firestore for user libraries and to support a community activity feed.",
     images: [
-      { src: "/projects/NextReadsHomePage.png", caption: "NextRead Home Page" },
+      { src: "/projects/NextReadsHomePage.png", caption: "NextReads Home Page" },
       { src: "/projects/NextReadsDiscovery.png", caption: "Book Discovery" },
       { src: "/projects/NextReadsMyBooks.png", caption: "My Books" },
+      { src: "/projects/NextReadsCommunity.png", caption: "Community" },
+      { src: "/projects/NextReadsAiChatbot.png", caption: "AI Chatbot" },
     ],
     tags: ["Spring Boot", "React", "Tailwind CSS", "Firebase Auth", "Docker", "Groq (LLaMA 3.1)"],
     demoLink: "https://next-read-phi.vercel.app/",
     repoLink: "https://github.com/RafeUmair/nextRead",
     apiLink: "https://nextread-6l8e.onrender.com/",
-    inDevelopment: true,
   },
   {
-    id: 3,
+    id: 2,
     title: "EduResource",
     description:
      "A full stack educational resource lending system developed for Curtin University's School of Education. The platform includes separate web applications for administrators and students, as well as a dedicated iPad app for tablet based student access. Students can browse, reserve, and loan educational resources, while administrators can manage inventory, users, and loans across the system.",
@@ -48,6 +34,21 @@ const projects = [
       "https://lending-library-admin-web-fe-capdk.ondigitalocean.app/",
     repoLink:
       "https://bitbucket.org/curtincomputingprojects/2024-22-eduresource/src/main/",
+  },
+  {
+    id: 3,
+    title: "Houser",
+    description:
+    "A Melbourne property price predictor powered by machine learning. Uses a Random Forest model trained on real housing data to estimate prices based on features such as suburb, land size and number of bedrooms.",
+    images: [
+      { src: "/projects/HousePriceHome.png", caption: "Houser Home Page" },
+      { src: "/projects/HousePriceValuation.png", caption: "House Valuation Results" },
+      { src: "/projects/HousePriceMap.png", caption: "Price map visualization" },
+    ],
+    tags: ["React", "FastAPI", "Python", "scikit-learn", "Tailwind CSS", "Leaflet"],
+    demoLink: "https://house-market-predictor.vercel.app/",
+    repoLink: "https://github.com/RafeUmair/houseMarketPredictor",
+    apiLink: "https://housemarketpredictor.onrender.com"
   }
 ];
 
